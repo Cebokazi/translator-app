@@ -1,0 +1,316 @@
+<!  DOCTYPE html>
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+  <title>Our App</title>
+ <style>
+     body {
+         padding: 25px;
+         background-color: white;
+         color: black;
+         font-size: 25px;
+     }
+     body input{
+            font-size :24;
+        }
+        body{
+            text-align: center;
+        }
+     .dark-mode {
+         background-color: black;
+        color: white;
+     }
+     body {
+         margin: 0;
+         font-family: Arial, Helvetica, sans-serif;
+     }
+     .topnav {
+         overflow: hidden;
+         background-color: #333;
+     }
+     .topnav a {
+         float: left;
+         color: #f2f2f2;
+         text-align: center;
+         padding: 14ox 16px;
+         text-decoration: none;
+         font-size: 17px;
+     }
+     .topna a:hover {
+         background-color: #ddd;
+         color: black;
+     }
+     .topnav a.active {
+         background-color: #3f3f3f;
+         color: white;
+     }
+     body {
+         font-family: "Lato", sans-serif;
+     }
+     .sidenav {
+         height: 100%;
+         width: 0;
+         position: fixed;
+         z-index: 1;
+         top: 0;
+         left: 0;
+         background-color: black;
+         overflow-x: hidden;
+         transition: 0.5s;
+         padding-top: 60px;
+     }
+     .sidenav a {
+         padding: 8px 8px 8px 32px;
+         text-decoration: none;
+         font-size: 25px;
+         color: #818181;
+         display: block;
+         transition: 0.3s;
+     }
+     .sidenav a:hover {
+         color: #f1f1f1;
+     }
+         .sidenav .closebtn {
+             position: absolute;
+             top: 0;
+             right: 25px;
+             font-size: 36px;
+             margin-left: 50px;
+         }
+   @media screen and (max-height: 450px)
+   {
+       .sidenav {padding-top: 15px;}
+       .sidenav {font-size: 18px;}
+   }
+
+   div.a {
+       text-align: center;
+   }
+</style>
+
+   <body>
+
+ <div class="topnav">
+    <h1><marquee><font color="white"><font face="courier">Codetelligent Translator</font></font></marquee></h1>
+</div>
+        <div class="a">
+     <div id="mySidenav" class="sidenav">
+         <a ref="javascript:void(0)"
+         class="closebtn"
+         onclick="closeNav()">&times;</a>
+         <a href="#button"><buttton onclick="myFunction()">Dark Mode</botton></a></div>
+     </div>
+     <span style="font-size: 30px;cursor: pointer;"
+     onclick="openNav()">&#9776;</span>
+
+     <script>
+         function openNav() {
+             document.getElementById("mySidenav").style.width="250px";
+         }
+         function closeNav() {
+             document.getElementById("mySidenav").style.width="0";
+         }
+         function myFunction() {
+             var element = document.body;
+             element.classList.toggle("dark-mode");
+         }
+         function checkForTranslation()
+        {
+           var input = document.getElementById("inputTextField").value;
+           var outputDiv = document.getElementById("translationOutputDiv")
+           var selectedLanguage = document.getElementById("LanguageSelector").value;
+
+           input = input.toLowerCase();
+           if (selectedLanguage == "Shona")
+        {
+           if (input == "hello")
+           {
+               outputDiv.innerHTML = "Mhoro";
+           }
+           else if (input == "how are you")
+           {
+               outputDiv.innerHTML = "Makidii";
+           }
+           else if (input == "thank you")
+           {
+               outputDiv.innerHTML = "Waita hako";
+           }
+          else
+           {
+               outputDiv.innerHTML = "";
+           }
+        }
+        if (selectedLanguage == "Setswana")
+        {
+           if (input == "hello")
+           {
+               outputDiv.innerHTML = "Dumela";
+           }
+           else if (input == "how are you")
+           {
+               outputDiv.innerHTML = "Le kae";
+           }
+           else if (input == "thank you")
+           {
+               outputDiv.innerHTML = "ke a leboga";
+           }
+          else
+           {
+               outputDiv.innerHTML = "";
+           }
+        }
+        if (selectedLanguage == "IsiXhosa")
+        {
+           if (input == "hello")
+           {
+               outputDiv.innerHTML = "Molo";
+           }
+           else if (input == "how are you")
+           {
+               outputDiv.innerHTML = "Unjani";
+           }
+           else if (input == "thank you")
+           {
+               outputDiv.innerHTML = "Ndiyabulela";
+           }
+          else
+           {
+               outputDiv.innerHTML = "";
+           }
+        }
+
+        if (selectedLanguage == "Afrikaans")
+        {
+           if (input == "hello")
+           {
+                outputDiv.innerHTML = "Hallo";
+           }
+           else if (input == "how are you")
+           {
+               outputDiv.innerHTML = "Hoe gaan dit";
+           }
+           else if (input == "thank you")
+           {
+               outputDiv.innerHTML = "Baie Dankie";
+           }
+          else
+           {
+               outputDiv.innerHTML = "";
+           }
+        }
+
+        if (selectedLanguage == "Vhenda")
+        {
+           if (input == "hello")
+           {
+               outputDiv.innerHTML = "Ndaa(m)/Aa(f)";
+           }
+           else if (input == "how are you")
+           {
+               outputDiv.innerHTML = "Vho vuwa hani";
+           }
+           else if (input == "thank you")
+           {
+               outputDiv.innerHTML = "Ndo li bua";
+           }
+          else
+           {
+               outputDiv.innerHTML = "";
+           }
+        }
+        
+        if (selectedLanguage == "IsiZulu")
+        {
+           if (input == "hello")
+           {
+               outputDiv.innerHTML = "Sawubona";
+           }
+           else if (input == "how are you")
+           {
+               outputDiv.innerHTML = "Kunjani";
+           }
+           else if (input == "thank you")
+           {
+               outputDiv.innerHTML = "Ngiyabonga";
+           }
+          else
+           {
+               outputDiv.innerHTML = "";
+           }
+        }
+          
+        if (selectedLanguage == "SeSotho")
+        {
+           if (input == "hello")
+           {
+               outputDiv.innerHTML = "Dumela";
+           }
+           else if (input == "how are you")
+           {
+               outputDiv.innerHTML = "O Kae";
+           }
+           else if (input == "thank you")
+           {
+               outputDiv.innerHTML = "Kea Leboha";
+           }
+          else
+           {
+               outputDiv.innerHTML = "";
+           }
+        }
+
+        if (selectedLanguage == "SiSwati")
+        {
+           if (input == "hello")
+           {
+               outputDiv.innerHTML = "Sawubona";
+           }
+           else if (input == "how are you")
+           {
+               outputDiv.innerHTML = "Kunjani";
+           }
+           else if (input == "thank you")
+           {
+               outputDiv.innerHTML = "Ngiyabonga (pronounced : near-bong-a)";
+           }
+        }
+
+        if (selectedLanguage == "IsiNdebele")
+        {
+           if (input == "hello")
+           {
+               outputDiv.innerHTML = "Salibonani/Lotjhani";
+           }
+           else if (input == "how are you")
+           {
+               outputDiv.innerHTML = "Linjani";
+           }
+           else if (input == "thank you")
+           {
+               outputDiv.innerHTML = "Ngiyathokoza";
+           }
+        }
+       }
+     </script>
+     <h2>
+        Simple
+        <select id="LanguageSelector" onchange="checkForTranslation()">
+            <option>Shona</option>
+            <option>Setswana</option>
+            <option>IsiXhosa</option>
+            <option>Afrikaans</option>
+            <option>Vhenda</option>
+            <option>IsiZulu</option>
+            <option>SeSotho</option>
+            <option>SiSwati</option>
+            <option>IsiNdebele</option>
+            <option></option>
+        </select>
+        Translator
+    </h2><br><br>
+    
+    <input placeholder="Write an English Word Here" id="inputTextField" type="text" onkeyup="checkForTranslation()">
+    <div id="translationOutputDiv" style="display: inline">[translation]</div>
+ </body>
+</html>
